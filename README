@@ -1,0 +1,20 @@
+
+To compile, use the Makefile. 
+
+To run, you can either use the generated executable file, or run it in prolog.
+If using the executable file:
+   You must specify a debug file for Alma to run, using the following command-line arguments: 
+   'debug N Fname'
+   N specifies the debugging level, as described below:
+     0 - Nothing
+     1 - Show step numbers, and at that step: added formulas, deleted formulas, tcp input, tcp output.
+     2 - In addition to the above, show the agenda
+     3 - In addition, show successful resolutions
+   Fname specifies the name of the file in which the debugging information will go.
+
+If running in prolog:
+   Start by loading the file toplevel.pl. Following that, execute the following command:
+   'initialize.'
+   After initialization, provide any desired command-line arguments with the command 'handle_args(X).'
+   As with the executable, you must specify a debug file, otherwise Alma will crash on any commands
+   given. Follow the instructions above on how to specify a debug file. 
